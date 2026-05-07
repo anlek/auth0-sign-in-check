@@ -62,10 +62,10 @@ npx wrangler secret put AUTH0_CLIENT_SECRET
 Generate separate random values for the support-code HMAC secret and the OAuth state cookie secret:
 
 ```bash
-node -e "console.log(require('crypto').randomBytes(32).toString('base64url'))"
+node -e "console.log('HASH_SECRET example: ' + require('crypto').randomBytes(32).toString('base64url'))"
 npx wrangler secret put HASH_SECRET
 
-node -e "console.log(require('crypto').randomBytes(32).toString('base64url'))"
+node -e "console.log('COOKIE_SECRET example: ' + require('crypto').randomBytes(32).toString('base64url'))"
 npx wrangler secret put COOKIE_SECRET
 ```
 
