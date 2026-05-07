@@ -1,0 +1,15 @@
+{
+	"$schema": "./node_modules/wrangler/config-schema.json",
+	"name": "auth0-sign-in-check",
+	"main": "src/index.ts",
+	"compatibility_date": "2026-05-06",
+	"routes": [
+		{
+			"pattern": "verify.example.com",
+			"custom_domain": true
+		}
+	],
+	"secrets": {
+		"required": ["AUTH0_DOMAIN", "AUTH0_CLIENT_ID", "AUTH0_CLIENT_SECRET", "HASH_SECRET", "COOKIE_SECRET"]
+	}
+}
